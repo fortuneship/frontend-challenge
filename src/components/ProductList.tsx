@@ -27,9 +27,11 @@ const ProductList = () => {
     }
 
     const content = (
-        <main className="main main--products">
+        <div className="container mx-auto p-20">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-0">
             {pageContent}
-        </main>
+        </div>
+        </div>
     )
 
     return content

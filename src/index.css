@@ -6,6 +6,94 @@
     box-sizing: border-box;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+
+button,
+select {
+    font: inherit;
+    padding: 0.25em;
+}
+
+.main--cart {
+    flex-flow: column nowrap;
+  }
+
+  .cart {
+    padding: 0;
+    margin-top: 0.5em;
+}
+
+.cart__item {
+    display: grid;
+    grid-template-columns: 4fr 3fr 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 0.5em;
+}
+
+.cart__img {
+    display: none;
+    min-width: 68px;
+}
+
+.cart__select {
+    max-height: 48px;
+}
+
+.cart__item-subtotal {
+    display: none;
+    text-align: center;
+}
+
+.cart__button {
+    max-height: 48px;
+    justify-self: flex-end;
+}
+
+.cart__totals {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+
+.main--cart {
+    flex-flow: column nowrap;
+  }
+
+@media screen and (min-width: 601px) {
+    .product {
+        width: 30%;
+    }
+
+    .cart__item {
+        grid-template-columns: 3fr 15fr 5fr 1fr 8fr 1fr;
+    }
+
+    .cart__img, .cart__item-subtotal {
+        display: block;
+    }
+
+    .cart__submit {
+        max-width: 300px;
+    }
+
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .offscreen {
     position: absolute;
     left: -10000px;
@@ -26,16 +114,16 @@ img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-}
+}  */
 
-#root {
-    /* React root div */
+ /* #root {
     min-height: 100vh;
     display: flex;
     flex-flow: column nowrap;
-}
+} */
+/* React root div */
 
-.main,
+/* .main,
 .header,
 .footer {
     padding: 0.25em;
@@ -81,18 +169,42 @@ img {
 }
 
 .footer {
-    flex-grow: 1;
+    
+    padding: 20px;
+    text-align: center; 
+    margin-top: 10px;
+} */
+
+/* flex-grow: 1;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-end;
-    height: 200px;
-    text-align: center;
-    background-color: gray;
-}
+    justify-content: flex-end; */
+
+/* .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+  }
 
 .product {
+    margin-top: 4em;
     width: 90%;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+} */
+
+/* .product p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+    color: red;
+}
+
+.product button {
+    padding: 0.6em;
+    color: green;
+    border-radius: 4px;
 }
 
 .product__img {
@@ -152,7 +264,7 @@ img {
     .cart__submit {
         max-width: 300px;
     }
-}
+} */
 
 
 /* @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
@@ -166,3 +278,4 @@ img {
 @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+

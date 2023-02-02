@@ -14,8 +14,16 @@ const Cart = () => {
     const pageContent = confirm
         ? <h2>Thank you for your order.</h2>
         : <>
-            <h2 className="offscreen">Cart</h2>
-            <ul className="cart">
+            <h2 className="px-20 py-5 text-lg font-bold">Shopping Cart {totalItems} item</h2>
+            {/* <div className="container p-8 mx-auto mt-12">
+                <div className="w-full overflow-x-auto">
+                    <div className="my-2">
+                        <h3 className="text-xl font-bold tracking-wider">Shopping Cart {totalItems} item</h3>
+                    </div>
+                </div>
+            </div> */}
+            
+            <ul className="container max-w">
                 {cart.map(item => {
                     return (
                         <CartLineItem
@@ -27,8 +35,8 @@ const Cart = () => {
                     )
                 })}
             </ul>
-            <div className="cart__totals">
-                <p>Total Items: {totalItems}</p>
+            <div className="cart__totals px-20 py-3">
+                {/* <p>Total Items: {totalItems}</p> */}
                 <p>Total Price: {totalPrice}</p>
                 <button className="cart__submit" disabled={!totalItems} onClick={onSubmitOrder}>
                     Place Order

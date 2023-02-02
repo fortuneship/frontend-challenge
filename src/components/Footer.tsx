@@ -9,10 +9,10 @@ const Footer = () => {
 
     const year: number = new Date().getFullYear()
 
-    const pageContent = <p>Shopping Cart &copy; {year}</p>
+    const pageContent = <p>Copyright &copy; {year}. Vezeti</p>
 
     const content = (
-        <footer className="footer">
+        <footer className="py-20 text-center text-lg">
             {pageContent}
         </footer>
     )
@@ -20,13 +20,3 @@ const Footer = () => {
     return content
 }
 export default Footer
-
-// import React from 'react'
-
-// const Footer = () => {
-//   return (
-//     <div>Footer</div>
-//   )
-// }
-
-// export default Footer

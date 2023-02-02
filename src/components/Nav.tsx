@@ -1,3 +1,6 @@
+import img from "../images/shopping-bag.png";
+
+
 type PropsType = {
     viewCart: boolean,
     setViewCart: React.Dispatch<React.SetStateAction<boolean>>,
@@ -6,11 +9,14 @@ type PropsType = {
 const Nav = ({ viewCart, setViewCart }: PropsType) => {
 
     const button = viewCart
-        ? <button onClick={() => setViewCart(false)}>View Products</button>
-        : <button onClick={() => setViewCart(true)}>View Cart</button>
+        ? <button onClick={() => setViewCart(false)}><img src={img} className="w-10 h-10" /></button>
+        : <button onClick={() => setViewCart(true)}><img src={img} className="w-10 h-10" /></button>
+
+        
 
     const content = (
         <nav className="nav">
+           
             {button}
         </nav>
     )
