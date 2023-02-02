@@ -31,7 +31,7 @@ const Product = ({ product, dispatch, REDUCER_ACTIONS, inCart }: PropsType): Rea
                     </span>
                 </div>
                 <div className="px-6 pb-2">
-                    <button onClick={onAddToCart} className="inline-block bg-green-800 rounded-full px-3 py-3 text-sm font-semibold text-white mr-2 mb-2">Add to Cart</button>
+                    <button onClick={onAddToCart} className="inline-block bg-blue-800 rounded-full px-3 py-3 text-sm font-semibold text-white mr-2 mb-2">Add to Cart</button>
                     
                 </div>
                 </div>

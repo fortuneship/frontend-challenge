@@ -12,7 +12,7 @@ const Footer = () => {
     const pageContent = <p>Copyright &copy; {year}. Vezeti</p>
 
     const content = (
-        <footer className="py-20 text-center text-lg">
+        <footer className="py-20 text-center text-lg sticky top-[100vh]">
             {pageContent}
         </footer>
     )
