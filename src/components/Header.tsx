@@ -12,7 +12,6 @@ type PropsType = {
 const Header = ({ viewCart, setViewCart }: PropsType) => {
     const { totalItems, totalPrice } = useCart()
     
-    
     const content = (
     
         // <header className="header">

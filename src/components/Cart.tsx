@@ -36,7 +36,6 @@ const Cart = () => {
                 })}
             </ul>
             <div className="cart__totals px-20 py-3">
-                {/* <p>Total Items: {totalItems}</p> */}
                 <p>Total Price: {totalPrice}</p>
                 <button className="cart__submit" disabled={!totalItems} onClick={onSubmitOrder}>
                     Place Order

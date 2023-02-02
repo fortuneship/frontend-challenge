@@ -1,7 +1,7 @@
 import { ProductType } from "../context/ProductsProvider"
 import { ReducerActionType, ReducerAction } from "../context/CartProvider"
 import { ReactElement, memo } from "react"
-import img from "../images/cart_image.jpeg";
+//import img from "../images/cart_image.jpeg";
 
 
 type PropsType = {
@@ -13,7 +13,7 @@ type PropsType = {
 
 const Product = ({ product, dispatch, REDUCER_ACTIONS, inCart }: PropsType): ReactElement => {
 
-     //const img: string = new URL(`../images/${product.sku}.jpeg`, import.meta.url).href
+     const img: string = new URL(`../images/${product.sku}.jpg`, import.meta.url).href
      //console.log(img)
 
     const onAddToCart = () => dispatch({ type: REDUCER_ACTIONS.ADD, payload: { ...product, qty: 1 } })
@@ -23,7 +23,7 @@ const Product = ({ product, dispatch, REDUCER_ACTIONS, inCart }: PropsType): Rea
     const content =
     <div className="p-10">
         <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                <img src={img} className=""/>
+                <img src={img} className="h-500"/>
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">{product.name}</div>
                     <span className="text-gray-700 text-base">
