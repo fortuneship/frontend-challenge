@@ -9,7 +9,7 @@ type PropsType = {
     setViewCart: React.Dispatch<React.SetStateAction<boolean>>,
 }
 
-const Header = ({ viewCart, setViewCart }: PropsType) => {
+const Header = ({ viewCart, setViewCart, handleSearch }: PropsType) => {
     const { totalItems, totalPrice } = useCart()
     
     const content = (
@@ -45,6 +45,7 @@ const Header = ({ viewCart, setViewCart }: PropsType) => {
         className="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
         type="text"
         id="search"
+        onChange={handleSearch}
         placeholder="Search for product..." /> 
     </div>
 </div>
