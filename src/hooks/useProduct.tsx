@@ -2,7 +2,7 @@ import { useContext } from "react"
 import ProductsContext from "../context/ProductsProvider"
 import { UseProductsContextType } from "../context/ProductsProvider"
 
-const useProducts = (): UseProductsContextType => {
+const useProducts = (products: any): UseProductsContextType => {
     return useContext(ProductsContext)
 }
 
