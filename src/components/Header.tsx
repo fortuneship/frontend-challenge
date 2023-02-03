@@ -7,6 +7,7 @@ import { useState } from "react"
 type PropsType = {
     viewCart: boolean,
     setViewCart: React.Dispatch<React.SetStateAction<boolean>>,
+    handleSearch: any
 }
 
 const Header = ({ viewCart, setViewCart, handleSearch }: PropsType) => {
