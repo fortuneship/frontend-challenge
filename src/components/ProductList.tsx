@@ -6,8 +6,7 @@ import Product from "./Product"
 
 const ProductList = (products: any) => {
     const { dispatch, REDUCER_ACTIONS, cart } = useCart()
-    const { products } = useProducts()
-
+   
     let pageContent: ReactElement | ReactElement[] = <p>Loading...</p>
 
     if (products.products?.length) {
