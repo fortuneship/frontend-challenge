@@ -6,8 +6,19 @@ import { useState } from "react"
 
 function App() {
   const [viewCart, setViewCart] = useState<boolean>(false)
+  const { products } = useProducts()
+  const [ items,  setItems ] = useState(products);
+  
+  const handleSearch = (event: any) => {
+    if(!event.target.value) {
+      setItems(products);
+      return
+    }
+    const filtered = products.filter((item) => item.name.toLowerCase().includes(event.target.value.toLowerCase()))
+    setItems(filtered)
+  }
 
-  const pageContent = viewCart ? <Cart /> : <ProductList />
+  const pageContent = viewCart ? <Cart /> : <ProductList products={items} />
 
   const content = (
     <>
